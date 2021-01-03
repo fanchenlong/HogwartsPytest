@@ -1,10 +1,13 @@
 import pytest
 
-from pythoncode.calculator import Calculator
-import getyam_open_cal
+
+from test_python import getyam_open_cal
 
 
 ##################  想把读取yam的方法单独封装，还没成功引用
+from test_python import Calculator
+
+
 class TestCalc:
     get_datas = getyam_open_cal.get_datas()
     def setup_class(self):

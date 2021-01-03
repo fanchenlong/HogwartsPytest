@@ -1,11 +1,14 @@
 import pytest
 
-from pythoncode.calculator import Calculator
+
 
 import yaml
 
+from test_python import Calculator
+
+
 def get_datas():
-    with open("./cal.yml") as f:
+    with open("cal.yml") as f:
         datas = yaml.safe_load(f)
         print(datas)
         ##加

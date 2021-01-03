@@ -19,4 +19,4 @@ def steps(path):
         if "step3" in steps:
             step3()
 def test_foo():
-    steps("./steps.yml")
+    steps("steps.yml")

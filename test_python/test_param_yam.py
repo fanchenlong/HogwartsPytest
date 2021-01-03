@@ -2,7 +2,7 @@ import pytest
 import yaml
 # yaml参数化
 def get_datas():
-    with open("./datayam.yml") as f:
+    with open("datayam.yml") as f:
         datas = yaml.safe_load(f)
         print(datas)
         add_datas = datas["datas"]
