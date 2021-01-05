@@ -1,6 +1,12 @@
 ##霍格沃兹学院pytest课程第一次作业
 
 ##作业列表
+
+############selenium1作业
+
+-[selenium1作业](test_selenium/test_demo.py)
+
+
 -[测试计算机作业]
 <<<<<<< HEAD
 - [测试计算机](test_python/test_cal.py)
@@ -19,7 +25,7 @@
 -[测试报告](test_python/allure-report)
 -[报告](test_python/result)
 
-############selenium1作业
+
 
 -[作业](test_selenium/test_demo.py)
 =======
