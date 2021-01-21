@@ -65,7 +65,13 @@ class TestDemo:
         #点击通讯录
         self.driver.find_element(MobileBy.XPATH, "//*[@text='通讯录']").click()
         #点击添加成员
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='添加成员']").click()
+        ######self.driver.find_element(MobileBy.XPATH, "//*[@text='添加成员']").click()
+        ###如果人多需要滑动查找添加成员按钮
+        self.driver.find_element(MobileBy.ANDROID_UIAUTOMATOR,
+                                 'new UiScrollable(new UiSelector().'
+                                 'scrollable(true).instance(0)).'
+                                 'scrollIntoView(new UiSelector().'
+                                 'text("添加成员").instance(0));').click()
         #选择手动输入添加
         self.driver.find_element(MobileBy.XPATH, "//*[@text='手动输入添加']").click()
         ####以下手动输入页面
