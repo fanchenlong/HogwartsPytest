@@ -29,5 +29,12 @@
 
 [appium第一次作业](test_appium/test_demo.py)
 
+#########appium第二次作业,把读取yaml的方法放到了page/basepage里
+
+[appium二次作业data](test_appium/data)
+[appium二次作业page](test_appium/page)
+[appium二次作业testcase](test_appium/testcase)
+
+
 
 
