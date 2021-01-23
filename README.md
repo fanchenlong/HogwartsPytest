@@ -35,6 +35,10 @@
 [appium二次作业page](test_appium/page)
 [appium二次作业testcase](test_appium/testcase)
 
+#######appium框架第一次作业、
+
+[appium框架第一次作业](test_frame)
+
 
 
 
