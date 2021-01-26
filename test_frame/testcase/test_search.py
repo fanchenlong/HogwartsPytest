@@ -5,3 +5,7 @@ def test_search():
     app = App()
     resutl = app.start().goto_main().goto_market_page().goto_search().search()
     assert resutl == True
+
+def test_mine():
+    app = App()
+    resutl = app.start().goto_main().goto_mine()

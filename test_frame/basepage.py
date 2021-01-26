@@ -26,7 +26,7 @@ def get_data():
     # print(A_DIR)
     ########摘抄自https: // www.cnblogs.com / shouhu / p / 12149553.html
                     #通过os获取yaml的路径
-    yaml_file_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/data/data.yaml"
+    yaml_file_path = os.path.abspath(__file__) + "black_list.yaml"
 
     with open(yaml_file_path, encoding='utf-8') as f:
         # with open('../data/data.yaml', encoding="UTF-8") as f:
@@ -71,6 +71,9 @@ class BasePage:
     #输入的方法
     def find_and_send_keys(self,locator,text):
         self.find(locator).send_keys(text)
+
+    def send(self,locator,content):
+        self.find(locator).send_keys(content)
     #滑动查找并点击的方法
     def scorll_find_click(self,text):
         element = (MobileBy.ANDROID_UIAUTOMATOR,
@@ -81,6 +84,22 @@ class BasePage:
         self.find_and_click(element)
     def find_and_get_test(self,locator):
         return self.find(locator).text
+
+    def run_steps(self,page_path,operation):
+        #yamll 的读取
+        with open(page_path,'r',encoding="utf-8") as f:
+            data = yaml.load(f)
+        #支持 PO下多个操作
+        steps = data[operation]
+        #遍历每一个动作
+        for step in steps:
+            action = step['action']
+            #如果动作是find_and_click，就调用basepage中的find_and_click
+            if action == "find_and_click":
+                # 调用find_and_click传入相应参数
+                self.find_and_click(step['locator'])
+            elif action == "send":
+                self.send(step['locator'],step['content'])
 
 
 
