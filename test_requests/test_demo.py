@@ -70,4 +70,4 @@ class TestDemo:
         if errmsg == "ok":
             print("查询成员成功",r.json())
         else:
-            print("查询成员失败:", errmsg)
+            print("查询成员失败:",errmsg)
