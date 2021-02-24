@@ -1,7 +1,8 @@
+
 import requests
 
 import json
-
+##企业微信
 class TestDemo:
 
     ##获取token
