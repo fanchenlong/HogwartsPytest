@@ -41,7 +41,11 @@
 
 #######appium框架第二次作业 
 
-[appium框架第二次作业](test_frame)
+[appium框架第二次作业](test_frame
 [数据](test_frame/main_page.yaml)
+
+##########requests第一次作业
+
+[requestsrequests第一次作业](test_requests/test_demo.py)
 
 
